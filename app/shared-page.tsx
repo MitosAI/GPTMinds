@@ -1,0 +1,4 @@
+import { ArrowRight, CircleCheck } from "lucide-react";
+import { BuildNote, Button, Footer, Nav, SectionHead, TraceCard } from "./components";
+export type PageData={eyebrow:string; title:string; intro:string; statement:string; blocks:{title:string,body:string}[]};
+export function SharedPage({data}:{data:PageData}){return <main className="sharedPage"><Nav/><section className="sharedHero"><span>{data.eyebrow}</span><h1>{data.title}</h1><p>{data.intro}</p><Button/></section><section className="sharedStatement"><p>{data.statement}</p></section><section className="sharedBlocks">{data.blocks.map((b,i)=><article key={b.title}><span>0{i+1}</span><h2>{b.title}</h2><p>{b.body}</p><CircleCheck/></article>)}</section><section className="sharedDemo"><SectionHead eyebrow="A decision, made legible" title="See the context behind the action."/><TraceCard/></section><BuildNote/><Footer/></main>}

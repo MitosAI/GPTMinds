@@ -1,0 +1,2 @@
+import Link from "next/link"; import { Footer, Nav } from "../components";
+export default function Page(){return <main className="simplePage"><Nav/><section><span>CONTACT</span><h1>Let’s talk about the decisions your business carries.</h1><p>For product questions, early access, or partnership conversations, reach the founding team directly.</p><Link href="mailto:hello@gptminds.com">hello@gptminds.com →</Link></section><Footer/></main>}
